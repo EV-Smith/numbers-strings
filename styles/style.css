@@ -1,0 +1,73 @@
+html
+  {
+    width: 90%;
+    font-family: Oswald;
+    font-size: 1rem;
+  }
+
+body 
+  {
+    margin: 1rem 2rem;
+    padding: 1rem 3rem;
+  }
+
+h1
+  {
+    font-size: 2rem;
+    font-weight: 700; 
+  }
+
+h2
+  {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+input[type=submit] {
+    padding:.5rem 1rem;
+    margin: .5rem 1rem .5rem 0;
+    font-family: Oswald;
+    font-weight: 400;
+    font-size: 1rem;
+    background:#FF503B; 
+    color: #ffffff;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+input[type=submit]:hover {
+    background:#E82F1E; 
+    color: #ffffff;
+}
+
+input[type=reset] {
+    padding:.5rem 1rem;
+    margin: .5rem 1rem .5rem 0;
+    font-family: Oswald;
+    font-weight: 400;
+    font-size: 1rem;
+    background:#FF503B; 
+    color: #ffffff;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+input[type=reset]:hover {
+    background:#E82F1E; 
+    color: #ffffff;
+}
+
+input {
+ padding: .2rem .5rem; 
+  margin: .2rem 0;
+}
+
+
+
+.results {
+ padding-right: 4rem; 
+}

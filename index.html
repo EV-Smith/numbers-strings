@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Numbers & Strings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  
+</head> 
+  <body>
+  
+      <form method="post" action="#">
+        <h1>Numbers &amp; Strings</h1>
+        <p>
+          <label>Enter numbers or text</label>
+          <br>
+          <textarea rows="7" cols="40" id="userInput" type="text" name="Title" required></textarea>
+        </p>
+        
+        <input type="submit" value="Submit" name="submit" onClick="getNumbers(); getStrings(); return false;">
+        
+        <input id="reset" type="reset" value="Reset" name="Reset" onClick="resetResults(); return false;">
+      </form>
+    
+      <h2>The Numbers</h2>
+        <div id="numberResults">
+          <p id="count" class="results">Count:</p>
+          <p id="sum" class="results">Sum:</p> 
+          <p id="average" class="results">Average:</p>
+        </div>
+     
+      <h2>The Strings</h2>
+        <div id="stringResults">
+          <p id="concat" class="results">Concatenated:</p>
+        </div>
+    
+    <script>
+      var count = 0;
+      var sum = 0;
+      var average = 0;
+      var numCalc = document.getElementById('numberResults');
+            
+      function getNumbers() {
+        var numEntered =  parseInt(document.getElementById("userInput").value);
+        var output = "";
+
+        count += 1;
+        sum += numEntered;
+        average = sum/count;
+        if (isNaN(numEntered)){
+          return;
+        }else{
+          output += '<p>Count: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+          output += count;
+          output += '</p>';
+          output += '<p>Sum: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+          output += sum;
+          output += '</p>';
+          output += '<p>Average: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+          output += average;
+          output += '</p>';
+
+          numCalc.innerHTML = output;
+        }
+      }
+      
+      function getStrings() {
+        var stringInput = document.getElementById('userInput').value;
+        if (isNaN(stringInput)){
+        document.getElementById('stringResults').innerHTML += stringInput + " ";
+        }else{
+          return;}
+      }
+       
+      function resetResults() {
+        document.getElementById('userInput').value = '';
+        document.getElementById('numberResults').innerHTML = '<p>Count: </p><p>Sum: </p><p>Average: </p>';
+        document.getElementById('stringResults').innerHTML = '<p>Concatenated: </p>';
+        count = 0;
+        sum = 0;
+        average = 0;
+      }
+
+    
+    </script>
+  </body>
+</html> 
